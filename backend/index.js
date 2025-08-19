@@ -1,0 +1,29 @@
+import express from "express";
+import cookieParser from "cookie-parser";
+
+
+import { ENV_VARS } from "./config/envVars.js";
+import { connectDB } from "./config/database.js";
+import { protectRoute } from "./middlewares/protectRoute.js";
+
+import authRoutes from './routes/auth.routes.js'
+import eventRoutes from './routes/event.routes.js'
+import ticketRoutes from './routes/ticket.routes.js'
+
+
+const app = express();
+const PORT = ENV_VARS.PORT;
+
+app.use(express.json());
+app.use(cookieParser());
+app.use("/uploads", express.static("utils/upload/images"));
+
+app.get('/', (req,res) => res.send ("Server is Ready"));
+app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/event', eventRoutes)
+app.use('/api/v1/ticket', ticketRoutes)
+
+app.listen(PORT, () => {
+  console.log("Server started at http://localhost:" + PORT);
+  connectDB();
+});
