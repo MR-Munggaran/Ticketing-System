@@ -89,33 +89,31 @@ ticketing/
 ## ⚙️ Instalasi
 
 ### 1. Clone Repo
-
-git clone https://github.com/MR-Munggaran/ticketing.git
-cd ticketing
+- git clone https://github.com/MR-Munggaran/ticketing.git
+- cd ticketing
 
 ### 2. Backend Setup
-cd backend
-npm install
+- cd backend
+- npm install
 
 ### 3. Frontend Setup
-cd ../frontend
-npm install
+- cd ../frontend
+- npm install
 
 ### 4. Jalankan Backend
-cd backend
-npm run dev
+- cd backend
+- npm run dev
 
 ### 5. Jalankan Frontend
-cd frontend
-npm run dev
+- cd frontend
+- npm run dev
 
 ## 📧 Kontak
-GitHub: MR-Munggaran
-Email: -
+- GitHub: MR-Munggaran
+- Email: -
 
 ### Dashboard
 <img width="1907" height="920" alt="image" src="https://github.com/user-attachments/assets/2e40cd8d-0806-42f2-8d18-8d570c898044" />
-
 
 ### Halaman Event
 <img width="1910" height="914" alt="image" src="https://github.com/user-attachments/assets/b8629590-c62b-4c69-8e46-e17bc9257c06" />
