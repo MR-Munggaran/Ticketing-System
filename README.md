@@ -1,4 +1,3 @@
-<img width="1901" height="918" alt="image" src="https://ctrlv.link/ie7J" />
 
 # 🎟️ Ticketing System
 
@@ -115,9 +114,12 @@ GitHub: MR-Munggaran
 Email: -
 
 ### Dashboard
-![Dashboard Screenshot] (https://ctrlv.link/BhNQ)
+<img width="1907" height="920" alt="image" src="https://github.com/user-attachments/assets/2e40cd8d-0806-42f2-8d18-8d570c898044" />
+
 
 ### Halaman Event
-![Event Page] (https://ctrlv.link/uErt) (https://ctrlv.link/ie7J)
+<img width="1910" height="914" alt="image" src="https://github.com/user-attachments/assets/b8629590-c62b-4c69-8e46-e17bc9257c06" />
+<img width="1908" height="915" alt="image" src="https://github.com/user-attachments/assets/09b4c3f4-ebe1-4109-8864-f11168f9d492" />
+
 
 
