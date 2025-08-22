@@ -57,10 +57,11 @@ const signup = async (req, res) => {
       name
     });
 
-    generateTokenAndSetCookie(newUser._id, res);
+    const token = generateTokenAndSetCookie(newUser._id, res);
     await newUser.save();
     return res.status(201).json({
       success: true,
+      token,
       User: {
         ...newUser._doc,
         password: "",
@@ -98,10 +99,11 @@ const login = async (req, res) => {
         .json({ success: false, message: "Invalid credentials" });
     }
 
-    generateTokenAndSetCookie(user._id, res);
+    const token = generateTokenAndSetCookie(user._id, res);
 
     res.status(200).json({
       success: true,
+      token,
       user: {
         ...user._doc,
         password: "",

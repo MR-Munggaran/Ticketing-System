@@ -1,5 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 
 import { ENV_VARS } from "./config/envVars.js";
@@ -13,6 +14,12 @@ import ticketRoutes from './routes/ticket.routes.js'
 
 const app = express();
 const PORT = ENV_VARS.PORT;
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true // kalau mau pakai cookie/session
+}));
 
 app.use(express.json());
 app.use(cookieParser());

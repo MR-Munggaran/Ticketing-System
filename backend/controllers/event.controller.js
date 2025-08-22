@@ -49,7 +49,6 @@ export const createEvent = async (req, res) => {
   }
 };
 
-
 export const getEvents = async (req, res) => {
   try {
     const events = await Event.find().populate("createdBy", "name email role");
@@ -91,35 +90,30 @@ export const updateEvent = async (req, res) => {
     event.description = description || event.description;
     event.location = location || event.location;
     event.datetime = datetime || event.datetime;
-    event.price = price || event.price;
-    event.capacity = capacity || event.capacity;
+    event.price = price ?? event.price;
+    event.capacity = capacity ?? event.capacity;
 
-    // cek apakah ada file gambar baru diupload
+    // jika ada file baru
     if (req.file) {
-      // hapus gambar lama (kecuali default link unsplash)
-      if (
-        event.image &&
-        !event.image.startsWith("http") // artinya file lokal
-      ) {
-        const oldPath = path.resolve("utils/upload/images", event.image);
-        if (fs.existsSync(oldPath)) {
-          fs.unlinkSync(oldPath);
-        }
+      // hapus gambar lama (kecuali default/eksternal)
+      if (event.image && !event.image.startsWith("http")) {
+        const oldFilename = path.basename(event.image); // ambil 'filename.jpg'
+        const oldPath = path.resolve("utils/upload/images", oldFilename);
+        if (fs.existsSync(oldPath)) fs.unlinkSync(oldPath);
       }
 
-      // simpan nama file baru
-      event.image = req.file.filename;
+      // simpan path lengkap ke DB
+      event.image = `/uploads/${req.file.filename}`;
     }
 
     await event.save();
     res.status(200).json(event);
   } catch (error) {
+    console.error("Error in updateEvent controller", error);
     res.status(500).json({ error: "Internal Server Error" });
-    console.log("Error in updateEvent controller", error);
   }
 };
 
-// DELETE EVENT
 export const deleteEvent = async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);

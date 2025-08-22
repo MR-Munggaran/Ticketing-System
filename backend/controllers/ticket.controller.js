@@ -49,15 +49,17 @@ export const buyTickets = async (req, res) => {
 
 export const myTicket = async (req, res) => {
   try {
-    const userId = req.user._id;
+    const userId = req.params.userId;
+    if (!userId) return res.status(400).json({ message: "User ID required" });
+
     const tickets = await Ticket.find({ user: userId })
-      .populate("event", "title date location")
+      .populate("event", "title datetime location")
       .sort({ purchasedAt: -1 });
 
     res.status(200).json(tickets);
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
     console.error("Error in myTicket controller", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
@@ -66,7 +68,10 @@ export const listTickets = async (req, res) => {
     if (!req.user || req.user.role !== "admin") {
       return res.status(403).json({ message: "Unauthorized" });
     }
-    const tickets = await Ticket.find()
+
+    const eventId = req.params.id;
+
+    const tickets = await Ticket.find({ event: eventId })
       .populate("event", "title date")
       .populate("user", "name email");
 
@@ -98,3 +103,23 @@ export const validateTickets = async (req, res) => {
   }
 };
 
+export const deleteTicket = async (req, res) => {
+  try {
+    const ticket = await Ticket.findById(req.params.id);
+
+    if (!ticket) return res.status(404).json({ message: "Ticket not found" });
+
+    if (
+      ticket?.createdBy?.toString() !== req.user._id.toString() &&
+      req.user.role !== "admin"
+    ) {
+      return res.status(403).json({ message: "Unauthorized" });
+    }
+
+    await ticket.deleteOne();
+    res.status(200).json({ message: "Ticket deleted successfully" });
+  } catch (error) {
+    console.error("Error in deleteTicket controller:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
