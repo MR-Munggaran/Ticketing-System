@@ -1,4 +1,6 @@
-<img width="1901" height="918" alt="image" src="https://github.com/user-attachments/assets/50e2b7f2-71b4-4a8c-9f0f-40e9bd737399" /># 🎟️ Ticketing System
+<img width="1901" height="918" alt="image" src="https://ctrlv.link/ie7J" />
+
+# 🎟️ Ticketing System
 
 Aplikasi **Ticketing System** berbasis web untuk manajemen event dan pembelian tiket.  
 Proyek ini dibangun dengan arsitektur **frontend-backend terpisah**, menggunakan **Node.js (Express)** sebagai backend dan **React** sebagai frontend.  
