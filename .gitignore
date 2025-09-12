@@ -6,7 +6,7 @@ build/
 # Logs
 logs/
 *.log
-*images/
+# *images/
 npm-debug.log*
 
 # Dependency directories
