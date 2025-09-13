@@ -24,6 +24,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("utils/upload/images"));
+app.use(express.static("public"));
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/public/dist/index.html");
+});
 
 app.get('/', (req,res) => res.send ("Server is Ready"));
 app.use('/api/v1/auth', authRoutes)
