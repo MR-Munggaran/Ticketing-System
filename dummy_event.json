@@ -1,0 +1,170 @@
+[
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a83"
+    },
+    "title": "Ado World Tour 2025: 'KURA KURA' in Jakarta",
+    "description": "Rasakan vokal 'Uta' yang meledak-ledak! Ado kembali mengguncang Jakarta dengan tur dunia terbarunya.",
+    "location": "Istora Senayan, Jakarta",
+    "datetime": {
+      "$date": "2025-12-05T20:00:00.000Z"
+    },
+    "price": 2200000,
+    "capacity": 7000,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-20T10:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-20T10:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a84"
+    },
+    "title": "milet Live in Jakarta: 'Green Lights' Tour",
+    "description": "Nikmati suara sinematik milet yang memukau. Malam penuh emosi dan vokal yang indah.",
+    "location": "Tennis Indoor Senayan, Jakarta",
+    "datetime": {
+      "$date": "2025-11-28T19:30:00.000Z"
+    },
+    "price": 1650000,
+    "capacity": 5000,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-21T11:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-21T11:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a85"
+    },
+    "title": "Aimer 2026 Tour 'Étoile' in Jakarta",
+    "description": "Malam magis bersama Aimer. Dengarkan langsung 'Zankyosanka' dan 'Brave Shine'.",
+    "location": "ICE BSD Hall 5, Tangerang",
+    "datetime": {
+      "$date": "2026-02-14T20:00:00.000Z"
+    },
+    "price": 2100000,
+    "capacity": 10000,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-22T14:30:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-22T14:30:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a86"
+    },
+    "title": "Mrs. Green Apple - 'Utopia' Tour Jakarta",
+    "description": "Energi penuh warna dari Mrs. Green Apple! Siap-siap untuk 'Ao to Natsu' dan 'Soranji'.",
+    "location": "Beach City International Stadium, Ancol",
+    "datetime": {
+      "$date": "2026-01-24T19:00:00.000Z"
+    },
+    "price": 1950000,
+    "capacity": 15000,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-23T09:15:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-23T09:15:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a87"
+    },
+    "title": "Yorushika Live Tour 'Moonlight' in Jakarta",
+    "description": "Pengalaman audio-visual unik dari Yorushika. Selami dunia 'Elma' dan 'Amy'.",
+    "location": "The Kasablanka Hall, Jakarta",
+    "datetime": {
+      "$date": "2025-12-12T19:30:00.000Z"
+    },
+    "price": 1700000,
+    "capacity": 3500,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-24T16:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-24T16:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a88"
+    },
+    "title": "LiSA LiVE is Smile Always 'LANDER' Tour 2026",
+    "description": "Ratu Anisong kembali! Bersiaplah untuk 'Gurenge' dan 'Homura' live!",
+    "location": "Istora Senayan, Jakarta",
+    "datetime": {
+      "$date": "2026-03-07T19:00:00.000Z"
+    },
+    "price": 2500000,
+    "capacity": 7000,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-25T11:00:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-25T11:00:00.000Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68c4b1c7e1a86d16a7ce1a89"
+    },
+    "title": "back number 'in your humor' tour 2026 - Live in Jakarta",
+    "description": "Malam penuh melodi melankolis dan indah bersama back number. 'Suiheisen' live.",
+    "location": "Tennis Indoor Senayan, Jakarta",
+    "datetime": {
+      "$date": "2026-02-28T19:30:00.000Z"
+    },
+    "price": 1800000,
+    "capacity": 5000,
+    "image": "",
+    "createdBy": {
+      "$oid": "68c4afd3e1a86d16a7ce1a6e"
+    },
+    "createdAt": {
+      "$date": "2025-09-26T13:45:00.000Z"
+    },
+    "updatedAt": {
+      "$date": "2025-09-26T13:45:00.000Z"
+    },
+    "__v": 0
+  }
+]

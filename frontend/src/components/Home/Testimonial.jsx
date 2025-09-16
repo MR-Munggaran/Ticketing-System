@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Logo from '../../assets/Logo.png'
 
 const testimonials = [
   {
@@ -9,7 +10,7 @@ const testimonials = [
     role: "CEO of Workcation",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    logo: "https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg",
+    logo: Logo,
   },
   {
     quote:
@@ -17,7 +18,7 @@ const testimonials = [
     name: "Michael Scott",
     role: "Regional Manager",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    logo: "https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg",
+    logo: Logo,
   },
   {
     quote:
@@ -25,7 +26,7 @@ const testimonials = [
     name: "Pam Beesly",
     role: "Designer",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    logo: "https://tailwindcss.com/plus-assets/img/logos/workcation-logo-indigo-600.svg",
+    logo: Logo,
   },
 ];
 

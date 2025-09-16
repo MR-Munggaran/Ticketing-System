@@ -1,11 +1,13 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import path from "path";
+
 
 
 import { ENV_VARS } from "./config/envVars.js";
 import { connectDB } from "./config/database.js";
-import { protectRoute } from "./middlewares/protectRoute.js";
+
 
 import authRoutes from './routes/auth.routes.js'
 import eventRoutes from './routes/event.routes.js'
@@ -24,10 +26,6 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("utils/upload/images"));
-app.use(express.static("public"));
-app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/public/dist/index.html");
-});
 
 app.get('/', (req,res) => res.send ("Server is Ready"));
 app.use('/api/v1/auth', authRoutes)
