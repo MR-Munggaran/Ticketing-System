@@ -18,7 +18,7 @@ const app = express();
 const PORT = ENV_VARS.PORT;
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "http://192.168.0.5"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true // kalau mau pakai cookie/session
 }));
