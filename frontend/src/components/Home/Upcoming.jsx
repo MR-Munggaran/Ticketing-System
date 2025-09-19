@@ -52,8 +52,12 @@ function Countdown({ targetDate }) {
 
 export default function UpcomingEvents() {
   // ambil hanya 3 event pertama untuk ditampilkan di homepage
-  const {events, loading} = useEvents();
-  const previewEvents = events.slice(0, 3);
+  const { events, loading } = useEvents();
+
+  // pastikan selalu array
+  const safeEvents = Array.isArray(events) ? events : [];
+  const previewEvents = safeEvents.slice(0, 3);
+
   if (loading) return <p>Loading...</p>;
 
   return (
@@ -99,7 +103,9 @@ export default function UpcomingEvents() {
 
                   <div className="mt-3 flex justify-between items-center">
                     <p className="text-sm font-bold text-orange-600">
-                      {event.price ? `Rp ${event.price.toLocaleString("id-ID")}` : "Free"}
+                      {event.price
+                        ? `Rp ${event.price.toLocaleString("id-ID")}`
+                        : "Free"}
                     </p>
                     <Link
                       to={`/event/${event._id}`}
